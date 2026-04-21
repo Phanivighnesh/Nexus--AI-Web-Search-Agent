@@ -4,22 +4,15 @@
     {
       "src": "run.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "50mb" }
-    },
-    {
-      "src": "static/**",
-      "use": "@vercel/static"
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
     }
   ],
   "routes": [
-    { "src": "/static/(.*)", "dest": "/static/$1" },
-    { "src": "/api/(.*)",    "dest": "/run.py" },
-    { "src": "/(.*)",        "dest": "/run.py" }
-  ],
-  "env": {
-    "FLASK_ENV":   "production",
-    "FLASK_DEBUG": "false",
-    "LOG_FORMAT":  "json",
-    "LOG_LEVEL":   "INFO"
-  }
+    {
+      "src": "/(.*)",
+      "dest": "run.py"
+    }
+  ]
 }
