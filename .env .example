@@ -1,0 +1,29 @@
+# ── Groq LLM (optional — UI key takes priority if user sets one) ─
+# Free key at: https://console.groq.com/keys
+GROQ_API_KEY=gsk_your_key_here
+
+# Model to use when no per-user key overrides it
+GROQ_MODEL=llama-3.3-70b-versatile
+GROQ_MAX_TOKENS=1024
+GROQ_TEMPERATURE=0.25
+
+# ── Search ────────────────────────────────────────────────────────
+SEARCH_MAX_RESULTS=5
+SEARCH_MAX_NEWS=3
+SEARCH_SNIPPET_CHARS=900
+
+# ── Flask ─────────────────────────────────────────────────────────
+FLASK_ENV=production
+FLASK_DEBUG=false
+FLASK_HOST=0.0.0.0
+FLASK_PORT=7860
+# Generate: python -c "import secrets; print(secrets.token_hex(32))"
+FLASK_SECRET_KEY=generate-a-random-secret-here
+
+# ── Rate limiting / Cache / Logging ──────────────────────────────
+RATE_LIMIT_PER_MINUTE=30
+CACHE_TTL_SECONDS=300
+CACHE_MAX_SIZE=200
+LOG_LEVEL=INFO
+LOG_FORMAT=text
+CORS_ORIGINS=*
