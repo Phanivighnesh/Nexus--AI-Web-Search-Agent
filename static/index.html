@@ -12,6 +12,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <style>
 :root{
   --bg:#f6f5f2;--bg-p:#eceae4;--bg-hv:#e4e1da;--bg-ac:#dedad1;
@@ -547,7 +551,7 @@ const RMSGS=['thinking…','searching…','reading…','synthesising…','almost
 let st={activeConvId:null,convs:{},searching:false,hasServerKey:false,prefs:{name:'',tone:'balanced',news_categories:[]}};
 let thTimer=null,rbTimer=null,sbOpen=true;
 
-// ── API Key (localStorage) ──────────────────────────
+// ── API Key (localStorage) ─────────────────────��────
 function getKey(){try{return localStorage.getItem(SK)||''}catch{return''}}
 function setKey(k){try{localStorage.setItem(SK,k)}catch{}}
 function delKey(){try{localStorage.removeItem(SK)}catch{}}
